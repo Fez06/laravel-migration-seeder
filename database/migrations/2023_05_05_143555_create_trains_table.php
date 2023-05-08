@@ -22,8 +22,8 @@ return new class extends Migration
             $table->float('Orario di arrivo', 4,2);
             $table->smallInteger('Codice Treno');    /* poteva essere string */
             $table->tinyInteger('Numero Carrozze')->default(1);
-            $table->boolean('In orario');
-            $table->boolean('Cancellato');
+            $table->boolean('In orario')->default(true);
+            $table->boolean('Cancellato')->default(false);
             $table->timestamps();
         });
     }
