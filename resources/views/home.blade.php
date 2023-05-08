@@ -3,13 +3,17 @@
 
 @section('pageMain')
 
-<h1 >
-    @foreach ($trains as $train )
-    <div>
-        {{$train}};
-    </div>
-    <br>
-    @endforeach
-</h1>
+<ul>
+ @foreach ($trains as $train )
+    
+    <li>  
+        {{$train->company}} - {{$train->departure_station}} - {{$train->departure_time}};
+        <br>
+    </li> 
+    
+    
+ @endforeach
+</ul>
+
 
 @endsection
