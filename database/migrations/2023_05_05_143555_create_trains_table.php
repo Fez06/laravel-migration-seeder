@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('Azienda',20);
             $table->string('Stazione di partenza',30);
             $table->string('Stazione di arrivo',30);
-            $table->float('Orario di partenza', 4,2);
+            $table->float('Orario di partenza', 4,2); /* dateTime sarebbe stato meglio*/
             $table->float('Orario di arrivo', 4,2);
-            $table->smallInteger('Codice Treno');
-            $table->tinyInteger('Numero Carrozze');
+            $table->smallInteger('Codice Treno');    /* poteva essere string */
+            $table->tinyInteger('Numero Carrozze')->default(1);
             $table->boolean('In orario');
             $table->boolean('Cancellato');
             $table->timestamps();
